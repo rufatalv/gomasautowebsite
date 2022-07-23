@@ -4,12 +4,6 @@ const mymodal = document.getElementById('modal')
 const modalmask = document.getElementById('modalMask')
 const modalClose = document.getElementById('modalClose')
 
-modalClose.addEventListener('click', modalCloseFunc);
-
-function modalCloseFunc(){
- modalmask.classList.remove('activeModal')
- mymodal.classList.remove('activeModal')
-}
 const readMore = document.querySelector('.read-more');
 const mt = document.getElementById('more-text');
 // let mtData = mt.getAttribute('val');
@@ -75,7 +69,12 @@ $(document).ready(function(){
 });
 
 
+modalClose.addEventListener('click', modalCloseFunc);
 
+function modalCloseFunc(){
+ modalmask.classList.remove('activeModal')
+ mymodal.classList.remove('activeModal')
+}
 
 function getValue(e){
   const mt = e.value;
